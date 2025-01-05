@@ -1,0 +1,30 @@
+{
+  "album": [
+    {
+      "id": "0",
+      "title": "Lahmiz",
+      "creationDate": "2024-09-24",
+      "archived": 0,
+      "coverPicture": "assets/lahmiz.png"
+    },
+    {
+      "id": "1",
+      "title": "Touta",
+      "creationDate": "2024-03-16",
+      "archived": 1,
+      "coverPicture": "assets/touta.png"
+    },
+    {
+      "id": "2",
+      "title": "Hamza",
+      "creationDate": "2024-09-24",
+      "archived": 0,
+      "coverPicture": "assets/hamza.png"
+    }
+  ],
+  "photo": [
+    {
+      "id": "5023"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+
+<div *ngFor="let album of albums">
+  <ng-container *ngIf="album.archived===1">
+  <div class="col-md-4" >
+    <img [src]="album.coverPicture" [alt]="album.title"
+        class="img-fluid rounded-start" />
+
+  </div>
+  <h5>{{album.title}}</h5>
+</ng-container>
+</div>

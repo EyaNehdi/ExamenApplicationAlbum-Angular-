@@ -1,0 +1,27 @@
+<form #f="ngForm" (submit)="submit()">
+<table>
+  <tr>
+    <td><label>Titre:</label></td>
+    <td><input type="text" name="title" [(ngModel)]="album.title" #title="ngModel" required pattern="^[a-zA-Z0-9]+$">
+    <div>
+<div *ngIf="(title.dirty || title.touched) && title.invalid">
+  <small *ngIf="title.errors!['required']" class="alert alert-danger">Le champ titre est obligatoire </small>
+  <small *ngIf="title.errors!['pattern']" class="alert alert-danger">Le champ titre doit contenir des lettres et des chiffres </small>
+   </div>
+    </div>
+  </td>
+  </tr>
+  <tr>
+    <td><label>Photo de couverture:</label></td>
+    <td><input type="text" name="pdc" [(ngModel)]="album.coverPicture" #pdc="ngModel" minlength="5">
+      <div *ngIf="(pdc.dirty || pdc.touched) && pdc.invalid">
+        <small *ngIf="pdc.errors!['minlength']" class="alert alert-danger">Le champ CoverPicture doit contenir au moins 5 caractères </small>
+         </div>
+        </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><button type="submit" [disabled]="f.invalid">Ajouter</button></td>
+  </tr>
+</table>
+</form>
